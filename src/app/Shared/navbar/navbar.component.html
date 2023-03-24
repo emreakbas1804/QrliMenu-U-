@@ -1,0 +1,18 @@
+<nav>
+  <div class="container">
+      <a routerLink="" title="ana sayfa">
+          <img src="../assets/images/logo.png" alt="logo">
+      </a>
+      <div class="responsive" id="nav-links">
+          <ul>
+            <li *ngIf="isLogin"><a routerLink="/kategori-ekle">Kategori ekle</a></li>
+            <li *ngIf="isLogin"><a routerLink="/urun-ekle">Ürün ekle</a></li>
+            <li *ngIf="isLogin"><a routerLink="/kategoriler">Kategoriler</a></li>
+            <li *ngIf="isLogin"><a routerLink="/urunler">Ürünler</a></li>
+              <li ><a routerLink="/panel">Panel</a></li>
+              <li *ngIf="isLogin"><a routerLink="/" (click)="logOut()">Çıkış yap</a></li>
+          </ul>
+      </div>
+      <i class="fas fa-bars nav-icon"></i>
+  </div>
+</nav>

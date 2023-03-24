@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategoriler</title>
+</head>
+<body>
+  <navbar></navbar>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of categories">
+        <div class="card">
+          <img class="card-img-top" src="{{apiUrl}}/images/userCategoryImages/{{item.categoryImageUrl}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"> {{item.categoryName}}</h5>
+            <p>categoryId = {{item.categoryId}}</p>
+            <p>category ımage url = {{item.categoryImageUrl}}</p>
+            <a routerLink="{{item.categoryId}}" class="btn btn-primary">Düzenle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

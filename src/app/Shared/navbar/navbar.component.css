@@ -1,0 +1,110 @@
+nav{
+  background-color: #cd5234;
+}
+nav img{
+  display: inline;
+  width: 300px;
+  min-height: 30px;
+  margin: 10px;
+}
+nav ul{
+  display: inline;
+  float: right;
+  margin-top: 30px;
+}
+nav ul li{
+  display: inline;
+}
+nav ul li a{
+  margin-left: 40px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 17px;
+  position: relative;
+  transition: .4s ease-out;
+}
+nav ul li a:hover{
+  color: white ;
+}
+nav ul li a::after{
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+  background: white ;
+  transition: 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+  left: 0;
+  width: 100%;
+}
+.nav-icon{
+  display: none;
+}
+#nav-links{
+  display: inline;
+}
+@media only screen and (max-width:767px) {
+  .nav-icon{
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #F8F8FF;
+      font-size: 30px;
+  }
+  #nav-links{
+      display: none;
+      height: 100vh;
+  }
+  nav ul{
+      display: block;
+      text-align: center;
+      float: none;
+      padding-left: 0px;
+  }
+  nav ul li{
+      display: block;
+      margin-top: 50px;
+  }
+  nav ul li a{
+      font-size: 25px;
+  }
+}
+@media only screen and (min-width:768px) {
+  #nav-links{
+      display: inline !important;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width:1200px){
+  nav img{
+      width: 200px;
+  }
+  nav ul li a{
+      margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width:990px){
+  nav img{
+      width:150px;
+      margin-right: 0;
+  }
+  nav ul {
+      margin-top: 30px;
+  }
+  nav ul li a{
+      margin-left: 8px;
+      padding: 0;
+      font-size: 17px;
+  }
+}

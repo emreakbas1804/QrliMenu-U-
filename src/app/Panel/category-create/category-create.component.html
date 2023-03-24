@@ -1,0 +1,30 @@
+<navbar></navbar>
+<div class="container">
+  <div class="row mt-4">
+    <h2>Kategori ekle</h2>
+    <hr>
+    <div class="alert alert-{{infoColor}}" *ngIf="info != ''">
+      {{info}}
+    </div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="mt-2">
+
+      <div class="mb-4">
+        <label>Kategori ismi</label>
+        <input type="text" ngModel name="categoryName" class="form-control" required>
+      </div>
+
+
+      <div class="mb-3">
+        <input type="file" name="image" (change)="onFileSelected($event)" class="form-control"
+          accept="image/jpg, image/jpeg, image/png" ngModel required/>
+      </div>
+
+
+
+
+      <div style="float:right;">
+        <button type="submit" class="btn btn-outline-primary">POST</button>
+      </div>
+    </form>
+  </div>
+</div>

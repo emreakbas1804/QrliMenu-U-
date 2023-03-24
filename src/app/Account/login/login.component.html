@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş yap</title>
+</head>
+
+<body>
+  <navbar></navbar>
+  <div class="container">
+    <h2 class="mt-4">Giriş yap</h2>
+    <hr>
+    <div class="row">
+      <form #form="ngForm" (ngSubmit)="LoginForm(form)">
+        <div class="alert alert-{{infoColor}}" *ngIf="info != ''">
+          {{info}}
+        </div>
+        <div class="my-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" ngModel required placeholder="Email" email>
+        </div>
+        <div class="my-3">
+          <label class="form-label">Parola</label>
+          <input type="password" class="form-control" name="password" ngModel required placeholder="Parola">
+        </div>
+        <div style="float:right;">
+          <a routerLink="/parolami-unuttum" class="mx-3">Parola mı unuttum</a>
+          <a routerLink="/kayit-ol" class="mx-3">Kayıt ol</a>
+          <button type="submit" class="btn btn-primary">Giriş yap</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
